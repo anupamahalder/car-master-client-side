@@ -42,37 +42,77 @@ export default function SimpleSlider() {
   };
   return (
     <Slider {...settings} className="mx-auto">
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img1} alt="" />
-        <div className="absolute md:px-10 top-1/4 px-2">
-          <h1 className=" text-6xl font-bold text-white" style={{textShadow: '2px 2px 2px #BE1921'}}>Affordable <br/>Price For Car<br/> Servicing</h1>
-          <p className="text-white text-xl py-2 w-[600px]">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
-          <div className="">
-          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2">Discover More</button>
-          <button className="outline py-2 px-8 rounded-md outline-3 outline-white text-white font-semibold">Explore</button>
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
           </div>
         </div>
       </div>
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img2} alt="" />
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
+          </div>
+        </div>
       </div>
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img3} alt="" />
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
+          </div>
+        </div>
       </div>
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img4} alt="" />
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
+          </div>
+        </div>
       </div>
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img5} alt="" />
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
+          </div>
+        </div>
       </div>
-      <div className="h-[220px] md:h-[70vh] mx-auto ">
+      <div className="h-[400px] md:h-[500px] rounded-xl mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img6} alt="" />
+        <div className="h-full absolute top-0 bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)100%]">
+          <h1 className="text-2xl mt-28 ml-20 md:text-6xl font-bold text-white">Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white ml-20 text-sm md:text-xl py-2 w-[300px] md:w-[600px] italic">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="ml-20">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2 hover:text-[#BE1921] hover:bg-white">Discover More</button>
+          <button className="outline py-2 px-6 rounded outline-4 outline-white text-white font-semibold hover:bg-white hover:text-black">Latest Project</button>
+          </div>
+        </div>
       </div>
     </Slider>
   );
