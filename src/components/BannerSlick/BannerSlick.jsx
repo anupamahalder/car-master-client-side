@@ -41,10 +41,18 @@ export default function SimpleSlider() {
     prevArrow: <PrevArrow />
   };
   return (
-    <Slider {...settings} className="mx-auto bg-black">
+    <Slider {...settings} className="mx-auto">
       <div className="h-[220px] md:h-[70vh] mx-auto ">
         <img className="w-full object-cover object-bottom" 
         src={img1} alt="" />
+        <div className="absolute md:px-10 top-1/4 px-2">
+          <h1 className=" text-6xl font-bold text-white" style={{textShadow: '2px 2px 2px #BE1921'}}>Affordable <br/>Price For Car<br/> Servicing</h1>
+          <p className="text-white text-xl py-2 w-[600px]">Unleash the full potential of your vehicle with our top-notch car servicing. Experience peak performance and safety, one service at a time.</p>
+          <div className="">
+          <button className="text-white font-semibold py-3 px-5 rounded-md bg-[#BE1921] mr-2">Discover More</button>
+          <button className="outline py-2 px-8 rounded-md outline-3 outline-white text-white font-semibold">Explore</button>
+          </div>
+        </div>
       </div>
       <div className="h-[220px] md:h-[70vh] mx-auto ">
         <img className="w-full object-cover object-bottom" 
