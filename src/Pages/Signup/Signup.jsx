@@ -19,8 +19,9 @@ const Signup = () => {
         .then(res =>{
             const user = res.user;
             console.log(user);
+            form.reset();
         }) 
-        .then(err =>{
+        .catch(err =>{
             console.log(err.message);
         })
     }
