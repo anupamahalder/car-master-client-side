@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import img from '../../assets/images/login/login.svg';
-const Login = () => {
-    const handleLogin = (e)=>{
+
+const Signup = () => {
+    const handleSignup = e =>{
         e.preventDefault();
 
     }
@@ -13,9 +14,15 @@ const Login = () => {
                     <img src={img} alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100 pb-6">
-                <form onSubmit={handleLogin}
+                <form onSubmit={handleSignup}
                 className="card-body">
-                    <h1 className="text-3xl text-center font-bold">Login</h1>
+                    <h1 className="text-3xl text-center font-bold">Sign Up</h1>
+                    <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Name</span>
+                    </label>
+                    <input type="text" name='name' placeholder="name" className="input input-bordered" required />
+                    </div>
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
@@ -32,10 +39,10 @@ const Login = () => {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                    <button type='submit' className="btn bg-[#FF3811] text-white ">Sign In</button>
+                    <button type='submit' className="btn bg-[#FF3811] text-white ">Sign Up</button>
                     </div>
                 </form>
-                <h1 className='text-center'>New to Car Master? <Link to='/signup' className='text-[#FF3811] font-semibold'>Sign Up</Link></h1>
+                <h1 className='text-center'>Already have account to Car Master? <Link to='/login' className='text-[#FF3811] font-semibold'>Login</Link></h1>
                 </div>
             </div>
             </div>
@@ -43,4 +50,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
