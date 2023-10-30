@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Checkout = () => {
     // load the service data and destructure it
-    const {_id, title, price} = useLoaderData();
+    const {_id, title, price, img} = useLoaderData();
     // get user form context 
     const {user} = useContext(AuthContext);
     // handle book service 
@@ -15,14 +15,31 @@ const Checkout = () => {
         const email = form.email.value;
         const date = form.date.value;
         // create object 
-        const order = {
+        const bookingInfo = {
             customerName: name,
             email,
             date,
-            service: _id,
+            img,
+            service_title: title,
+            service_id: _id,
             price: price
         }
-        console.log(order);
+        console.log(bookingInfo);
+        // send data to server 
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bookingInfo)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if(data.insertedId){
+                alert('Service is booked successfully!');
+            }
+        })
     }
     return (
         <div className="min-h-[90vh] pt-2 pb-10">
