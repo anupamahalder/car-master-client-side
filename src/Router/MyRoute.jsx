@@ -32,7 +32,7 @@ const MyRoute = createBrowserRouter([
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
                 // using params we will get the id 
-                loader: ({params}) =>fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) =>fetch(`http://localhost:5050/services/${params.id}`)
             },
             {
                 path: '/bookings',

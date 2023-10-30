@@ -26,7 +26,7 @@ const Checkout = () => {
         }
         console.log(bookingInfo);
         // send data to server 
-        fetch('http://localhost:5000/bookings', {
+        fetch('http://localhost:5050/bookings', {
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

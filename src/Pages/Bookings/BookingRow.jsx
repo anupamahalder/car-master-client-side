@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-const BookingRow = ({booking, handleDelete}) => {
+const BookingRow = ({booking, handleDelete, handleConfirm}) => {
     // destructure 
-    const {_id, date, service_title, price, img} = booking;
+    const {_id, date, service_title, price, img, status} = booking;
     return (
         <tr>
             <th>
@@ -23,7 +23,9 @@ const BookingRow = ({booking, handleDelete}) => {
             <td>{date}</td>
             <td>${price}</td>
             <th>
-            <button className="btn btn-ghost btn-xs">details</button>
+            {
+                status === 'confirmed' ? <span className='text-green-500 uppercase font-semibold'>Confirmed</span>
+                :<button onClick={()=>handleConfirm(_id)} className="btn btn-ghost btn-xs">Please Confirm</button>}
             </th>
         </tr>
     );
@@ -32,5 +34,6 @@ const BookingRow = ({booking, handleDelete}) => {
 BookingRow.propTypes ={
     booking: PropTypes.object.isRequired,
     handleDelete: PropTypes.func.isRequired,
+    handleConfirm: PropTypes.func.isRequired,
 }
 export default BookingRow;
