@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
+    const navigate = useNavigate();
     // destructure 
     const {signIn} = useContext(AuthContext);
     const handleLogin = (e)=>{
@@ -18,6 +19,7 @@ const Login = () => {
             const user = res.user;
             console.log(user);
             form.reset();
+            navigate('/');
         }) 
         .catch(err =>{
             console.log(err.message);
