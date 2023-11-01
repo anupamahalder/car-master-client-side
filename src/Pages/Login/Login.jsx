@@ -21,12 +21,18 @@ const Login = () => {
             const loggedInUser = res.user;
             console.log(loggedInUser);
             const user = {email};
-            // form.reset();
-            // navigate(location?.state ? location?.state : '/');
 
             // get access token 
-            axios.post('http://localhost:5050/jwt', user)
-            .then(res=>console.log(res.data))
+            axios.post('http://localhost:5050/jwt', user, {withCredentials:true})
+            .then(res=>{
+                console.log(res.data);
+                if(res.data.success){
+                    // if we get sucess is true then only naviagate 
+                    form.reset();
+                    navigate(location?.state ? location?.state : '/');
+                }
+            })
+
         }) 
         .catch(err =>{
             console.log(err.message);
