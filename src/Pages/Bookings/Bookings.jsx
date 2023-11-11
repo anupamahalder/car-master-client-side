@@ -12,10 +12,14 @@ const Bookings = () => {
     // load data 
     useEffect(()=>{
         // using axios and get cookies in the server side
-        axios.get(url, {withCredentials:true})
-        .then(res=>{
+        axios.get(url, {withCredentials: true})
+        .then(res =>{
             setBookings(res.data);
         })
+        // axios.get(url, {withCredentials:true})
+        // .then(res=>{
+        //     setBookings(res.data);
+        // }
         // fetch(url)
         // .then(res => res.json())
         // .then(data => setBookings(data));

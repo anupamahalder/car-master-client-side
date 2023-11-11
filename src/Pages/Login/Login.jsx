@@ -17,22 +17,36 @@ const Login = () => {
 
         //login user with email and password
         signIn(email, password)
-        .then(res =>{
-            const loggedInUser = res.user;
+        .then(result =>{
+            const loggedInUser = result.user;
             console.log(loggedInUser);
+            // do not send password to server send email only 
             const user = {email};
-
-            // get access token 
-            axios.post('http://localhost:5050/jwt', user, {withCredentials:true})
-            .then(res=>{
+            // using axios send data to url and give the data 
+            // axios converts data to json so we get direct json data in response 
+            axios.post('http://localhost:5050/jwt', user, 
+            {withCredentials: true})
+            .then(res => {
                 console.log(res.data);
-                if(res.data.success){
-                    // if we get sucess is true then only naviagate 
-                    form.reset();
-                    navigate(location?.state ? location?.state : '/');
+                if(res.data?.success){
+                    navigate(location?.state ? location.state : '/');
                 }
             })
 
+            // const loggedInUser = res.user;
+            // console.log(loggedInUser);
+            // const user = {email};
+
+            // // get access token 
+            // axios.post('http://localhost:5050/jwt', user, {withCredentials:true})
+            // .then(res=>{
+            //     console.log(res.data);
+            //     if(res.data.success){
+            //         // if we get sucess is true then only naviagate 
+            //         form.reset();
+            //         navigate(location?.state ? location?.state : '/');
+            //     }
+            // })
         }) 
         .catch(err =>{
             console.log(err.message);
